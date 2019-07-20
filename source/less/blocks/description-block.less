@@ -1,0 +1,54 @@
+.description-block {
+  background: url("img/index-can-mobile.png") no-repeat 50% 0;
+  background-size: 320px auto;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.description-block__header {
+  padding-top: 29px;
+  padding-right: 38px;
+  padding-bottom: 19px;
+  padding-left: 37px;
+}
+
+.description-block__slogan {
+  padding-right: 60px;
+  padding-bottom: 29px;
+  padding-left: 62px;
+}
+
+.description-block__image {
+  padding-bottom: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .description-block {
+    background: @bg-white;
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .stats {
+    width: 619px;
+    margin-left: 90px;
+}
+
+.description-block__image {
+  margin-top: -100px;
+}
+}
+
+@media (min-width: @desktop-width) {
+  .description-block {
+    background: url("img/index-background-desktopjpg ") no-repeat 50% 0;
+    background-size: 720px auto;
+  }
+
+  .stats {
+    width: 975px;
+    margin-right: 285px;
+  }
+}
