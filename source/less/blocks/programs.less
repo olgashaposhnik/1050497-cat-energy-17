@@ -1,0 +1,107 @@
+.programs {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.programs__list {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.programs__item {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+}
+
+.programs__title {
+  margin-top: 39px;
+  margin-bottom: 36px;
+}
+
+.programs__description {
+  margin-bottom: 45px;
+}
+
+.programs__link {
+  margin-bottom: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    width: 768px;
+    margin: 0;
+  }
+
+  .programs__wrapper {
+    .programs {
+      width: 708px;
+      margin: 0;
+    }
+
+    .programs__list {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    .programs__item {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    .programs__title {
+      margin-top: 81px;
+      margin-bottom: 26px;
+    }
+
+    .programs__description {
+      margin-bottom: 61px;
+    }
+
+    .programs__link {
+      margin-bottom: 62px;
+    }
+  }
+}
+
+    @media (min-width: @desktop-width) {
+      .programs {
+        width: 1220px;
+        margin: 0;
+      }
+
+      .programs__wrapper {
+        .programs {
+          width: 1220px;
+          margin: 0;
+        }
+
+        .programs__list {
+          width: 1220px;
+          margin: 0 auto;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .programs__item {
+          width: 570px;
+        }
+
+        .programs__title {
+          margin-top: 81px;
+          margin-bottom: 75px;
+        }
+
+        .programs__description {
+          margin-bottom: 36px;
+        }
+
+        .programs__link {
+          margin-bottom: 62px;
+        }
+}
+}
