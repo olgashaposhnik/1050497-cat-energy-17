@@ -10,7 +10,6 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
 }
 
 .programs__item {
@@ -30,7 +29,7 @@
   margin-top: 39px;
   margin-bottom: 36px;
   padding-left: 92px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-style: normal;
@@ -56,7 +55,7 @@
 
   &--slim::after {
     content: "";
-    background-image: url('../img/icon-cat-slim.svg');
+    background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
     position: absolute;
     display: block;
@@ -69,7 +68,7 @@
 
   &--pro::after {
     content: "";
-    background-image: url('../img/icon-cat-pro.svg');
+    background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
     position: absolute;
     display: block;
@@ -85,7 +84,7 @@
   margin-bottom: 45px;
   width: 240px;
   padding-left: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -98,7 +97,7 @@
 
 .programs__link {
   margin-bottom: 22px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -114,7 +113,7 @@
 
   &::after {
     content: "";
-    background-image: url('../img/icon-right-arrow-long.svg');
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     position: absolute;
     display: block;
@@ -147,7 +146,6 @@
       width: 653px;
       margin: 0;
       padding-left: 55px;
-
     }
 
     .programs__title {
@@ -169,40 +167,40 @@
   }
 }
 
-    @media (min-width: @desktop-width) {
-      .programs {
-        width: 1220px;
-        margin: 0;
-      }
+@media (min-width: @desktop-width) {
+  .programs {
+    width: 1220px;
+    margin: 0;
+  }
 
-      .programs__wrapper {
-        .programs {
-          width: 1220px;
-          margin: 0;
-        }
+  .programs__wrapper {
+    .programs {
+      width: 1220px;
+      margin: 0;
+    }
 
-        .programs__list {
-          width: 1220px;
-          margin: 0 auto;
-          flex-direction: row;
-          justify-content: space-between;
-        }
+    .programs__list {
+      width: 1220px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-        .programs__item {
-          width: 570px;
-        }
+    .programs__item {
+      width: 570px;
+    }
 
-        .programs__title {
-          margin-top: 81px;
-          margin-bottom: 75px;
-        }
+    .programs__title {
+      margin-top: 81px;
+      margin-bottom: 75px;
+    }
 
-        .programs__description {
-          margin-bottom: 36px;
-        }
+    .programs__description {
+      margin-bottom: 36px;
+    }
 
-        .programs__link {
-          margin-bottom: 62px;
-        }
-}
+    .programs__link {
+      margin-bottom: 62px;
+    }
+  }
 }

@@ -3,7 +3,6 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 0;
-  background-color: #ffffff;
   width: 280px;
   background-color: #f2f2f2;
 }
@@ -62,7 +61,7 @@
 
 .slider__link {
   display: block;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -112,35 +111,32 @@
     position: relative;
   }
 
-.slider__image {
-  position: relative;
+  .slider__image {
+    position: relative;
 
-  &--before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 690px;
-    height: 517px;
-    margin-left: 46px;
-    clip: rect(auto, 338px, auto, auto);
-    z-index: 2;
+    &--before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 690px;
+      height: 517px;
+      margin-left: 46px;
+      clip: rect(auto, 338px, auto, auto);
+      z-index: 2;
+    }
+
+    &--after {
+      position: absolute;
+      top: 0;
+      left: 47px;
+      display: block;
+      width: 690px;
+      height: 517px;
+      clip: rect(auto, auto, auto, 338px);
+      z-index: 1;
+    }
   }
-
-  &--after {
-    position: absolute;
-    top: 0;
-    left: 47px;
-    display: block;
-    width: 690px;
-    height: 517px;
-    clip: rect(auto, auto, auto, 338px);
-    z-index: 1;
-  }
-}
-
-
-
 
   .slider__toggles {
     margin-top: 537px;
@@ -165,7 +161,7 @@
     }
   }
 
-  .slider__toggle {
+  /*.slider__toggle {
     width: 428px;
     height: 6px;
     background-color: #dcdcdc;
@@ -176,7 +172,7 @@
     &::before {
       display: none;
     }
-  }
+  }*/
 
   .slider__toggle {
     position: absolute;
@@ -249,6 +245,16 @@
     margin-top: 557px;
     margin-left: 80px;
     justify-content: flex-end;
+    width: 428px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 2.5px;
+    position: relative;
+
+    &::before {
+      display: none;
+    }
   }
 
   .slider__link {
@@ -265,19 +271,6 @@
       text-align: left;
       padding-left: 19px;
       width: 50px;
-    }
-  }
-
-  .slider__toggles {
-    width: 428px;
-    height: 6px;
-    background-color: #dcdcdc;
-    border: none;
-    border-radius: 2.5px;
-    position: relative;
-
-    &::before {
-      display: none;
     }
   }
 
