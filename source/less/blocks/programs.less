@@ -56,13 +56,27 @@
 
   &--slim::after {
     content: "";
-    background-image: url('../icon-cat-slim.svg');
+    background-image: url('../img/icon-cat-slim.svg');
+    background-repeat: no-repeat;
     position: absolute;
     display: block;
     width: 35px;
     height: 49px;
-    bottom: -7px;
-    left: 22px;
+    bottom: -5px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  &--pro::after {
+    content: "";
+    background-image: url('../img/icon-cat-pro.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: 67px;
+    height: 28px;
+    bottom: 6px;
+    left: 13px;
     z-index: 2;
   }
 }
@@ -96,6 +110,20 @@
   text-decoration: none;
   text-transform: uppercase;
   padding-left: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url('../img/icon-right-arrow-long.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 12px;
+    bottom: 2px;
+    left: 116px;
+    z-index: 2;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -116,21 +144,27 @@
     }
 
     .programs__item {
-      width: 708px;
-      margin: 0 auto;
+      width: 653px;
+      margin: 0;
+      padding-left: 55px;
+
     }
 
     .programs__title {
       margin-top: 81px;
       margin-bottom: 26px;
+      font-size: 36px;
     }
 
     .programs__description {
       margin-bottom: 61px;
+      width: 375px;
+      font-size: 16px;
     }
 
     .programs__link {
       margin-bottom: 62px;
+      font-size: 20px;
     }
   }
 }

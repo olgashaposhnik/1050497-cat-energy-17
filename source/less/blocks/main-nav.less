@@ -132,13 +132,32 @@
     .main-nav {
       width: auto;
       margin: 0;
-    }
+      width: 507px;
+      margin: 0;
+
+      position: relative;
+      background-color: @bg-white;
+
+      display: flex;
+      flex-direction: row;
+      }
 
     .main-nav__wrapper {
    display: flex;
+   flex-direction: row;
    justify-content: space-between;
-   width: 708px;
+   width: 507px;
    margin: 0 auto;
+ }
+
+ .main-nav__list {
+   margin: 0;
+   padding: 0;
+
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
  }
 
  .main-nav__toggle {
