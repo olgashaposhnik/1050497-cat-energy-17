@@ -53,6 +53,7 @@
     height: 60px;
     background-color: #68b738;
     bottom: 3px;
+    left: 0;
   }
 
   &--useful::after {
@@ -108,36 +109,100 @@
   }
 }
 
+.features__number {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .features {
     width: 708px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .features__title {
+    font-size: 60px;
+    width: 708px;
     margin-bottom: 63px;
     text-align: left;
   }
 
   .features__list {
+    font-size: 16px;
     width: 708px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .features__item {
-    width: 324px;
+    font-size: 16px;
+    width: 354px;
     margin: 0;
+    padding: 0;
+    padding-top: 108px;
+    padding-bottom: 130px;
     display: flex;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      bottom: 198px;
+      left: 0;
+    }
+
+    &--useful::after {
+      width: 80px;
+      height: 80px;
+      bottom: 181px;
+      left: 14px;
+    }
+
+    &--quickly::after {
+      width: 80px;
+      height: 80px;
+      bottom: 181px;
+      left: 14px;
+    }
+
+    &--easy::after {
+      width: 80px;
+      height: 80px;
+      bottom: 181px;
+      left: 14px;
+    }
+
+    &--changes::after {
+      width: 80px;
+      height: 80px;
+      bottom: 181px;
+      left: 14px;
+    }
+  }
+
+  .features__number {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 281px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f2f2f2;
+    display: block;
+    position: absolute;
+    top: -109px;
+    left: 118px;
+    z-index: -1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
     width: 1220px;
-    margin: 0;
+    margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -157,9 +222,45 @@
   }
 
   .features__item {
+    padding-top: 140px;
     width: 245px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &::before {
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+  }
+
+  &--useful::after {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 14px;
+  }
+
+  &--quickly::after {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 14px;
+  }
+
+  &--easy::after {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 14px;
+  }
+
+  &--changes::after {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 14px;
   }
 }

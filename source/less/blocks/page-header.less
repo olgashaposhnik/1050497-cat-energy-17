@@ -57,8 +57,28 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+    width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 61px;
+  }
+
   .page-header__logo {
+    padding-top: 24px;
+    padding-bottom: 113px;
+  }
+
+  .page-header__logo img {
     height: 60px;
     width: 203px;
+    text-align: left;
+    padding: 0;
   }
 }
