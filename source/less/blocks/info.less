@@ -10,12 +10,15 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
 }
 
 .info__label {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -29,7 +32,6 @@
 }
 
 .info__input {
-  margin-right: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -41,20 +43,21 @@
   text-transform: uppercase;
   color: #444444;
   border: solid 1px;
-  border-color: rgba (​205, ​ 205, ​ 205, 0.5);
+  border-color: rgba(205, 205, 205, 0.5);
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
+  margin-left: 15px;
 
   &--name {
     width: 230px;
   }
 
   &--weight {
-    width: 205px;
+    width: 188px;
   }
 
   &--age {
-    width: 172px;
+    width: 154px;
   }
 }
