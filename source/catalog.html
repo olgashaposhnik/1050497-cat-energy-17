@@ -9,21 +9,24 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
+    <div class="page-header__wrapper">
+    <a class="page-header__logo">
       <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов «Cat Energy»">
     </a>
-    <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <button class="page-header__toggle" type="button"></button>
+    </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a href="index.html" class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a>Каталог продукции</a>
+            <a class="site-list__link">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a href="form.html" class="site-list__link">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -339,9 +342,14 @@
     </section>
     <section class="contacts contacts--gray">
       <h2 class="visually-hidden">Адрес</h2>
+      <div class="contacts__container">
       <div class="contacts__wrapper">
       <p class="contacts__partnership">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="contacts__adress">
+        <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
+        <span class="contacts__city">Санкт-Петербург</span>
+      </p>
+      </div>
       </div>
       <img class="contacts__map" src="../img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
     </section>

@@ -44,9 +44,13 @@
 
 .example__table {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 22px;
+}
+
+.example__container {
+  width: 124px;
 }
 
 .example__value {
@@ -68,6 +72,15 @@
 .example__field {
   width: 124px;
   margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #444444;
 }
 
 .example__cost {
@@ -98,15 +111,17 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: 708px;
+    width: 768px;
     margin: 0 auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    background-color: #ffffff;
   }
 
   .example__wrapper {
     width: 708px;
     margin: 0 auto;
+
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .example__title {
@@ -138,10 +153,36 @@
     letter-spacing: normal;
   }
 
-  .example__table {
+  .example__cover {
+    width: 708px;
     display: flex;
-    width: 384px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__table {
+    width: 366px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 80px;
+  }
+
+  .example__container {
+    width: 162px;
+  }
+
+  .example__value {
+    width: 162px;
+    padding-bottom: 9px;
+
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .example__field {
+    width: 162px;
+    font-size: 14px;
   }
 
   .example__cost {

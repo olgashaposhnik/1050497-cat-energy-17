@@ -100,6 +100,8 @@
     padding-top: 69px;
     padding-right: 40px;
     padding-bottom: 62px;
+    display: flex;
+    flex-direction: column;
 
     font-weight: normal;
     font-size: 16px;
@@ -110,6 +112,10 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+  }
+
+  .contacts__street {
+    padding-bottom: 20px;
   }
 
   .contacts__map {
@@ -126,19 +132,30 @@
     justify-content: space-between;
     width: 1440px;
     margin: 0;
-    padding-top: 95px;
-    padding-right: 40px;
-    padding-bottom: 104px;
-    padding-left: 40px;
+    margin-top: 86px;
+    position: relative;
+  }
+
+  .contacts__container {
+    display: flex;
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
   }
 
   .contacts__wrapper {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
     width: 570px;
     margin: 0;
     padding-right: 75px;
     padding-left: 75px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    top: 74px;
+    left: -40px;
   }
 
   .contacts__partnership {
@@ -164,6 +181,8 @@
     width: 165px;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 
     font-weight: normal;
     font-size: 16px;
@@ -174,6 +193,10 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+  }
+
+  .contacts__street {
+    padding-bottom: 20px;
   }
 
   .contacts__map {
