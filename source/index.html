@@ -19,13 +19,13 @@
       <button class="main-nav__toggle" type="button"></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item site-list__item--active site-list__item--index">
             <a class="site-list__link">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--index">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--index">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -60,16 +60,12 @@
       <h2 class="features__title">Как это работает</h2>
       <ul class="features__list">
         <li class="features__item features__item--useful">Функциональное питание содержит только полезные питательные вещества.
-          <div class="features__number">
         </li>
         <li class="features__item features__item--quickly">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          <div class="features__number"></div>
         </li>
         <li class="features__item features__item--easy">Замените один-два приема обычной еды на наше функциональное питание.
-          <div class="features__number"></div>
         </li>
         <li class="features__item features__item--changes">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          <div class="features__number"></div>
         </li>
       </ul>
     </section>
@@ -88,16 +84,19 @@
           <dd class="example__field">затрачено времени</dd>
           </div>
         </dl>
-        <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+        <p class="example__cost">
+          <span class="example__costwrapper">Затраты на питание:</span>
+          <span class="example__costwrapper">15 000 руб.</span>
+          </p>
         </div>
       </div>
         <div class="example__slider__wrapper slider">
           <ul class="example__list slider__list">
             <li class="example__item slider__item slider__item--before">
-              <img class="slider__image slider__image--before" src="../img/before-mobile@1x.png" width="311" height="232" alt="До">
+              <img class="slider__image slider__image--before" src="../img/before-mobile@1x.png" width="622" height="232" alt="До">
             </li>
             <li class="example__item slider__item slider__item--after">
-              <img class="slider__image slider__image--after" src="../img/after-mobile@1x.png" width="311" height="232" alt="После">
+              <img class="slider__image slider__image--after" src="../img/after-mobile@1x.png" width="622" height="232" alt="После">
             </li>
           </ul>
           <div class="example__toggles slider__toggles">

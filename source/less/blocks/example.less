@@ -219,11 +219,16 @@
     margin: 0 auto;
     padding-right: 40px;
     padding-left: 40px;
+    display: flex;
+    flex-direction: row;
   }
 
   .example__wrapper {
-    width: 1220px;
+    width: 570px;
+    padding: 0;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
   .example__title {
@@ -256,6 +261,13 @@
     letter-spacing: normal;
   }
 
+  .example__cover {
+    width: 366px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .example__table {
     display: flex;
     width: 366px;
@@ -263,7 +275,9 @@
   }
 
   .example__cost {
-    justify-content: center;
+    width: 366px;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 70px;
 
     font-weight: normal;

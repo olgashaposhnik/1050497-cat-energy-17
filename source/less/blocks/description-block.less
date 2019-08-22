@@ -178,11 +178,17 @@
 
     background: url("../img/index-background-desktop.jpg ") no-repeat 50% 0;
     background-size: 720px auto;
+
+    &::before {
+      display: none;
+    }
   }
 
   .description-block__image {
-    width: 709px;
-    height: 609px;
+    width: 552px;
+    height: 499px;
+    position: relative;
+    z-index: 2;
   }
 
   .description-block__button {

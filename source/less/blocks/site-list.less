@@ -87,20 +87,46 @@
 @media (min-width: @desktop-width) {
   .site-list {
     width: 621px;
+    position: relative;
   }
 
   .site-list__item {
     margin-right: 0;
+    position: relative;
+    z-index: 1;
+
+    &--index:first-child::before {
+      content: "";
+      position: absolute;
+      background: #68b738;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 720px;
+      height: 696px;
+      top: 0;
+      left: -110px;
+      z-index: -2;
+    }
 
     &--active::after {
       right: 30px;
       left: 30px;
+      background: #68b738;
+    }
+
+    &--index::after {
+      background: #ffffff;
+    }
+
+    &--index a {
+      color: #ffffff;
     }
   }
 
-  .site-list__item a {
-    padding-right: 31px;
-    padding-left: 31px;
+  .site-list a {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .site-list__item a[href] {
