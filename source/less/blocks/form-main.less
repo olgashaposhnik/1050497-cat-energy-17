@@ -30,3 +30,47 @@
   font-stretch: normal;
   letter-spacing: normal;
 }
+
+@media (min-width: @tablet-width) {
+  .form-main {
+    width: 768px;
+  }
+
+  .form-main__wrapper {
+    width: 708px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .form-main__header {
+    padding-left: 0;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .form-main__text {
+    width: 323px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-main {
+    width: 1440px;
+  }
+
+  .form-main__wrapper {
+    width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form-main__text {
+    padding-left: 0;
+  }
+}
