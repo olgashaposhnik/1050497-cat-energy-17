@@ -2,6 +2,7 @@
   display: flex;
   width: 280px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .copyright__link {
@@ -15,20 +16,27 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
+  padding-top: 8px;
 }
 
 .copyright__image {
   width: 27px;
   height: 34px;
-  padding-left: 133px;
-
+  padding-top: 10px;
+  margin-left: 131px;
+  margin-right: -10px;
   text-align: left;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     display: flex;
-    width: 162px;
+    width: 164px;
     margin: 0;
   }
 
@@ -45,10 +53,16 @@
     letter-spacing: normal;
   }
 
+  .copyright__text {
+    padding-top: 0;
+    margin-top: -2px;
+  }
+
   .copyright__image {
-    width: 27px;
-    height: 34px;
+    width: 45px;
+    height: 40px;
     padding: 0;
+    margin-left: 13px;
 
     text-align: left;
   }
