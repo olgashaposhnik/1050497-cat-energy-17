@@ -202,14 +202,15 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    width: 1220px;
+    width: 1300px;
     margin: 0 auto;
-    padding-right: 40px;
-    padding-left: 40px;
   }
 
   .features__title {
-    margin-bottom: 63px;
+    margin: 0;
+    padding-top: 53px;
+    padding-bottom: 52px;
+    padding-left: 40px;
 
     text-align: left;
   }
@@ -219,7 +220,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1220px;
+    width: 1300px;
     margin: 0 auto;
   }
 
@@ -227,48 +228,50 @@
     display: flex;
     flex-wrap: wrap;
     width: 245px;
-    padding-right: 0;
+    padding-right: 40px;
+    padding-left: 40px;
     margin: 0;
-    padding-top: 140px;
-  }
+    padding-top: 112px;
+    padding-bottom: 114px;
 
-  &::before {
-    top: 0;
-    left: 0;
+    &::before {
+      top: -40px;
+      left: 155px;
 
-    width: 80px;
-    height: 80px;
-  }
+      width: 80px;
+      height: 80px;
+    }
 
-  &--useful::after {
-    top: 15px;
-    left: 14px;
+    &--useful::after {
+      top: 0;
+      left: 40px;
 
-    width: 80px;
-    height: 80px;
-  }
+      width: 80px;
+      height: 80px;
+    }
 
-  &--quickly::after {
-    top: 15px;
-    left: 14px;
+    &--quickly::after {
+      top: 0;
+      left: 40px;
 
-    width: 80px;
-    height: 80px;
-  }
+      width: 80px;
+      height: 80px;
+    }
 
-  &--easy::after {
-    top: 15px;
-    left: 14px;
+    &--easy::after {
+      top: 0;
+      left: 40px;
 
-    width: 80px;
-    height: 80px;
-  }
+      width: 80px;
+      height: 80px;
+    }
 
-  &--changes::after {
-    top: 15px;
-    left: 14px;
+    &--changes::after {
+      top: 0;
+      left: 40px;
 
-    width: 80px;
-    height: 80px;
+      width: 80px;
+      height: 80px;
+    }
   }
 }
