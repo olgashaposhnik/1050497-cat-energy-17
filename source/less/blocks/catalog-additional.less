@@ -112,8 +112,9 @@
   }
 
   .catalog-additional__header {
-    padding-left: 33px;
-    margin-bottom: 75px;
+    padding-left: 37px;
+    padding-top: 10px;
+    margin-bottom: 47px;
     font-size: 36px;
     line-height: 1;
   }
@@ -121,6 +122,7 @@
   .catalog-additional__list {
     margin: 0;
     padding: 0;
+    align-items: baseline;
 
     list-style: none;
   }
@@ -129,14 +131,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 633px;
     margin: 0 auto;
+    padding-bottom: 24px;
   }
 
   .catalog-additional__title {
     width: 280px;
+    padding: 0;
     padding-top: 28px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
 
     font-size: 20px;
     line-height: 1;
@@ -145,16 +150,23 @@
   .catalog-additional__table {
     display: flex;
     justify-content: space-between;
-    width: 280px;
+    align-items: flex-end;
+    width: 226px;
+    padding: 0;
 
     font-weight: normal;
     font-size: 16px;
     line-height: 1.25;
-    align-items: center;
+    margin-bottom: -11px;
   }
 
   .catalog-additional__field {
-    width: 140px;
+    text-align: right;
+    width: 177px;
+
+    &--milk {
+      width: 196px;
+    }
   }
 
   .catalog-additional__value {
@@ -165,6 +177,7 @@
 
   .catalog-additional__button {
     width: 630px;
+    padding-top: 11px;
   }
 }
 
@@ -173,6 +186,14 @@
     width: 895px;
     padding-left: 40px;
     margin: 0;
+  }
+
+  .catalog-additional__header {
+    padding-left: 0;
+    padding-top: 18px;
+    margin-bottom: 49px;
+    font-size: 36px;
+    line-height: 1;
   }
 
   .catalog-additional__list {
@@ -188,6 +209,12 @@
     justify-content: space-between;
     width: 895px;
     margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .catalog-additional__title {
+    padding-top: 27px;
   }
 
   .catalog-additional__table {
@@ -202,11 +229,13 @@
   }
 
   .catalog-additional__field {
+    text-align: left;
     width: 140px;
   }
 
   .catalog-additional__value {
     width: 140px;
+    margin-left: -5px;
 
     text-align: right;
   }
@@ -215,5 +244,6 @@
     width: 245px;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 4px;
   }
 }
