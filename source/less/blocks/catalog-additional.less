@@ -6,7 +6,7 @@
 .catalog-additional__header {
   margin: 0;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 
   font-weight: normal;
   font-size: 24px;
@@ -17,6 +17,18 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 53px;
+    height: 3px;
+    background-color: #68b738;
+    position: absolute;
+    bottom: 39px;
+    z-index: -1;
+    right: -20px;
+  }
 }
 
 .catalog-additional__list {
@@ -32,6 +44,31 @@
   justify-content: space-between;
   width: 280px;
   padding-bottom: 13px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 280px;
+    height: 208px;
+    border-top: solid 1px #cdcdcd;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 280px;
+    height: 208px;
+    border-bottom: solid 1px #cdcdcd;
+    background-color: transparent;
+    z-index: 2;
+  }
 }
 
 .catalog-additional__title {
@@ -117,6 +154,20 @@
     margin-bottom: 47px;
     font-size: 36px;
     line-height: 1;
+    position: relative;
+    background-color: #ffffff;
+    width: 374px;
+
+    &::before {
+      content: "";
+      width: 768px;
+      height: 3px;
+      background-color: #68b738;
+      position: absolute;
+      bottom: 41px;
+      z-index: -1;
+      left: -30px;
+    }
   }
 
   .catalog-additional__list {
@@ -184,21 +235,36 @@
 @media (min-width: @desktop-width) {
   .catalog-additional {
     width: 895px;
-    padding-left: 40px;
     margin: 0;
   }
 
   .catalog-additional__header {
-    padding-left: 0;
+    padding-left: 40px;
     padding-top: 18px;
     margin-bottom: 49px;
     font-size: 36px;
     line-height: 1;
+    background-color: #ffffff;
+    position: relative;
+    width: 373px;
+
+    &::before {
+      content: "";
+      width: 1440px;
+      height: 3px;
+      background-color: #68b738;
+      position: absolute;
+      bottom: 40px;
+      z-index: -1;
+      left: -110px;
+    }
   }
 
   .catalog-additional__list {
     margin: 0;
     padding: 0;
+
+    padding-left: 40px;
 
     list-style: none;
   }

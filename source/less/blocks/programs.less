@@ -105,6 +105,12 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+
+  &--pro {
+    width: 240px;
+    padding-left: 20px;
+    margin-bottom: 42px;
+  }
 }
 
 .programs__link {
@@ -124,6 +130,16 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -20px;
+    left: 20px;
+  }
 
   &::after {
     content: "";
@@ -160,6 +176,7 @@
     width: 653px;
     margin: 0;
     padding-left: 53px;
+    margin-bottom: 35px;
   }
 
   .programs__title {
@@ -207,19 +224,28 @@
       width: 344px;
       line-height: 1.5;
       margin-bottom: 55px;
+      padding-left: 0;
 
       font-size: 16px;
     }
   }
 
   .programs__link {
-    margin-bottom: 96px;
+    margin-bottom: 61px;
     padding-left: 0;
 
     font-size: 20px;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       bottom: 3px;
+      left: 130px;
+    }
+
+    &--pro::after {
       left: 125px;
     }
   }

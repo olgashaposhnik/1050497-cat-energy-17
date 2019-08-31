@@ -6,6 +6,27 @@
   padding: 0;
 
   background-color: #f2f2f2;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    bottom: 5px;
+    right: -65px;
+  }
+
+  &::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: -3px;
+    right: -65px;
+  }
 }
 
 .social__list {
@@ -36,6 +57,7 @@
   padding-top: 22px;
   padding-bottom: 27px;
 }
+
 
 .social__item:nth-child(3) {
   padding-bottom: 27px;
@@ -75,6 +97,14 @@
     padding: 0;
 
     background-color: #f2f2f2;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .social__list {

@@ -1,6 +1,20 @@
 .catalog-show {
   width: 280px;
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 320px;
+    height: 208px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+    background-color: transparent;
+    z-index: 2;
+  }
 }
 
 .catalog-show__title {
@@ -82,6 +96,19 @@
     width: 324px;
     margin: 0;
     margin-bottom: 58px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 82px;
+      left: 0;
+      width: 322px;
+      height: 430px;
+      background-color: transparent;
+      border: solid 1px #cdcdcd;
+      z-index: 2;
+    }
   }
 
   .catalog-show__title {

@@ -32,12 +32,12 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -60px;
-  right: 0;
+  padding: 0;
+  top: -59px;
+  right: -20px;
   z-index: 2;
-
   display: block;
-  width: 70px;
+  width: 61px;
   height: 50px;
 
   background-color: @bg-white;
@@ -70,13 +70,15 @@
   left: auto;
 
   &::before {
-    content: "../img/icon-close.svg";
+    content: "";
     position: absolute;
-    top: 24px;
-    left: 18px;
+    z-index: 2;
+    top: -42px;
+    left: 49px;
 
     width: 19px;
     height: 19px;
+    background-image: url("../img/icon-close.svg");
 
     background-color: #ffffff;
   }
@@ -87,7 +89,7 @@
     display: none;
 
     &--active {
-      display: block;
+      display: none;
     }
   }
 
@@ -147,7 +149,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 442px;
+    width: 500px;
     margin: 0;
   }
 

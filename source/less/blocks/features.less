@@ -145,6 +145,16 @@
     margin: 0 auto;
 
     font-size: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      width: 768px;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
   }
 
   .features__item {
@@ -165,7 +175,7 @@
       content: counter(section);
       position: absolute;
       top: -40px;
-      left: 115px;
+      left: 144px;
       z-index: -1;
 
       font-size: 281px;
@@ -208,7 +218,7 @@
 
   .features__title {
     margin: 0;
-    padding-top: 53px;
+    padding-top: 19px;
     padding-bottom: 52px;
     padding-left: 40px;
 
@@ -222,6 +232,10 @@
     justify-content: space-between;
     width: 1300px;
     margin: 0 auto;
+
+    &::before {
+      display: none;
+    }
   }
 
   .features__item {
