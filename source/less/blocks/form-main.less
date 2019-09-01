@@ -5,6 +5,7 @@
 
 .form-main__header {
   padding-left: 20px;
+  margin-top: 14px;
 
   font-weight: normal;
   font-size: 36px;
@@ -15,10 +16,23 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 320px;
+    height: 1px;
+    background-color: #cdcdcd;
+    z-index: 2;
+  }
 }
 
 .form-main__text {
   padding-left: 20px;
+  width: 230px;
 
   font-weight: normal;
   font-size: 14px;
@@ -29,6 +43,10 @@
   text-transform: uppercase;
   font-stretch: normal;
   letter-spacing: normal;
+}
+
+.form-main__wrapper {
+  padding-bottom: 26px;
 }
 
 @media (min-width: @tablet-width) {
