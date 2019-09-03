@@ -74,8 +74,26 @@
 
 @media (min-width: @tablet-width) {
   .target {
-    width: 600px;
+    width: 630px;
     margin: 0;
+    border: solid 1px #cdcdcd;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  .target__radio + .target__label::before {
+    top: -4px;
+    left: -43px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .target__radio:checked + .target__label::after {
+    top: 7px;
+    left: -32px;
+
+    width: 18px;
+    height: 18px;
   }
 
   .target__item {
