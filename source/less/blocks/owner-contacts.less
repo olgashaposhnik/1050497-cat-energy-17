@@ -2,6 +2,18 @@
   width: 280px;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #cdcdcd;
+    z-index: 2;
+  }
 }
 
 .owner-contacts__header {
@@ -17,8 +29,20 @@
   letter-spacing: normal;
   text-align: left;
   color: #111111;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 44px;
+  padding-bottom: 33px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 99px;
+    height: 3px;
+    background-color: #68b738;
+    position: absolute;
+    bottom: 44px;
+    z-index: -1;
+    right: -20px;
+  }
 }
 
 .owner-contacts__list {
@@ -45,10 +69,10 @@
   color: #222222;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 13px;
 }
 
 .owner-contacts__input {
-  margin: 0 auto;
   padding: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -60,18 +84,23 @@
   text-align: left;
   text-transform: uppercase;
   color: #444444;
-  padding-left: 16px;
-  padding-top: 15px;
-  padding-bottom: 14px;
-  margin-left: 15px;
+  padding-left: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
 
   &--email {
-    width: 219px;
+    width: 203px;
   }
 
   &--phone {
-    width: 204px;
+    width: 187px;
   }
+}
+
+.owner-contacts__svg {
+  position: absolute;
+  right: 11px;
 }
 
 @media (min-width: @tablet-width) {

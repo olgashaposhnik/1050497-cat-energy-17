@@ -17,8 +17,20 @@
   letter-spacing: normal;
   text-align: left;
   color: #111111;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 23px;
+  padding-bottom: 27px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 136px;
+    height: 3px;
+    background-color: #68b738;
+    position: absolute;
+    bottom: 32px;
+    z-index: -1;
+    right: -20px;
+  }
 }
 
 .additional__list {
@@ -33,7 +45,6 @@
   margin: 0 auto;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -45,8 +56,51 @@
   text-transform: uppercase;
   color: #222222;
   align-items: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.additional__checkbox {
+  display: none;
+}
+
+.additional__label {
+  position: relative;
+
+  padding-left: 46px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  cursor: pointer;
+}
+
+.additional__checkbox + .additional__label::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 0;
+
+  width: 28px;
+  height: 28px;
+
+  background-origin: content-box;
+  border: 1px solid rgb(205, 205, 205);
+  transform: translateY(-50%);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+
+  width: 23px;
+  height: 23px;
+
+  border: 0px;
+  left: -40px;
+  bottom: 10px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 @media (min-width: @tablet-width) {
