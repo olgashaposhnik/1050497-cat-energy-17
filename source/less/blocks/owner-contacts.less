@@ -30,7 +30,7 @@
   text-align: left;
   color: #111111;
   padding-top: 44px;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
   position: relative;
 
   &::before {
@@ -39,7 +39,7 @@
     height: 3px;
     background-color: #68b738;
     position: absolute;
-    bottom: 44px;
+    bottom: 64px;
     z-index: -1;
     right: -20px;
   }
@@ -69,7 +69,7 @@
   color: #222222;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 13px;
+  padding-bottom: 15px;
 }
 
 .owner-contacts__input {
@@ -88,24 +88,41 @@
   padding-top: 12px;
   padding-bottom: 12px;
   position: relative;
+  border: solid 1px #cdcdcd;
 
   &--email {
     width: 203px;
   }
 
   &--phone {
-    width: 187px;
+    width: 188px;
+  }
+
+  &:active .owner-contacts__svg {
+    fill: #68b738;
+  }
+
+  &:invalid .owner-contacts__svg {
+    fill: #ff8282;
   }
 }
 
 .owner-contacts__svg {
   position: absolute;
-  right: 11px;
+  fill: #222222;
+
+  &--email {
+    right: 15px;
+  }
+
+  &--phone {
+    right: 12px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .owner-contacts {
-    width: 768px;
+    width: 708px;
     margin: 0;
 
     &::before {
@@ -159,30 +176,54 @@
     font-size: 20px;
     line-height: 1;
     padding-left: 19px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 7px;
     margin-bottom: 7px;
 
     &--email {
-      width: 528px;
+      width: 530px;
     }
 
     &--phone {
-      width: 513px;
+      width: 515px;
+    }
+  }
+
+  .owner-contacts__svg {
+    position: absolute;
+
+    &--email {
+      right: 55px;
+    }
+
+    &--phone {
+      right: 52px;
+      bottom: 25px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .owner-contacts {
-    width: 1220px;
+    width: 1300px;
   }
 
   .owner-contacts__header {
-    width: 1220px;
+    width: 555px;
     padding-top: 59px;
-    padding-bottom: 61px;
+    padding-bottom: 71px;
+
+    &::before {
+      content: "";
+      width: 1440px;
+      height: 3px;
+      background-color: #68b738;
+      position: absolute;
+      bottom: 81px;
+      z-index: -1;
+      left: -70px;
+    }
   }
 
   .owner-contacts__list {
@@ -203,17 +244,32 @@
   .owner-contacts__input {
     font-size: 20px;
     line-height: 1;
-    padding-left: 21px;
-    padding-top: 17px;
-    padding-bottom: 14px;
-    margin-left: 16px;
+    padding-left: 17px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 0;
 
     &--email {
-      width: 484px;
+      width: 463px;
+      margin-right: 39px;
     }
 
     &--phone {
-      width: 470px;
+      width: 449px;
+    }
+  }
+
+  .owner-contacts__svg {
+    position: absolute;
+
+    &--email {
+      left: 573px;
+      bottom: 28px;
+    }
+
+    &--phone {
+      right: 58px;
+      bottom: 24px;
     }
   }
 }
