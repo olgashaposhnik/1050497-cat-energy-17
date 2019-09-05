@@ -6,12 +6,12 @@
   display: block;
   margin: 0 auto;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
 
-  font-weight: 500;
   font-size: 20px;
   line-height: 1;
   font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
   text-align: center;
   color: #111111;
   text-transform: uppercase;
@@ -33,16 +33,50 @@
   }
 }
 
+.site-list__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 516px;
+    justify-content: flex-end;
+    width: 500px;
+  }
+
+  .site-list a {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: left;
+    color: #222222;
   }
 
   .site-list__item {
-    margin-right: 36px;
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+
+    &:first-child {
+      margin-right: 34px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 37px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -66,8 +100,8 @@
 
   .site-list__item a {
     padding: 0;
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding-top: 42px;
+    padding-bottom: 6px;
 
     background: none;
     border: none;
@@ -86,21 +120,56 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    width: 621px;
+    width: 900px;
+    position: relative;
+    z-index: 1;
+    justify-content: flex-end;
+  }
+
+  .site-list a {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+    color: #222222;
+    padding-right: 26px;
+    padding-left: 9px;
+    padding-top: 21px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   .site-list__item {
     margin-right: 0;
+    position: relative;
+    z-index: 1;
+
+    &:first-child {
+      margin-right: 26px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 24px;
+    }
 
     &--active::after {
-      right: 30px;
-      left: 30px;
+      right: 0;
+      left: 9px;
+      background: #68b738;
     }
-  }
 
-  .site-list__item a {
-    padding-right: 31px;
-    padding-left: 31px;
+    &--index::after {
+      background: #ffffff;
+    }
+
+    &--index a {
+      color: #ffffff;
+    }
   }
 
   .site-list__item a[href] {

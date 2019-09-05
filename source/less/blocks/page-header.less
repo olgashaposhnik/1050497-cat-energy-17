@@ -26,8 +26,8 @@
 .page-header__logo img {
   width: 191px;
   height: 39px;
-  padding-top: 11px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   text-align: left;
 }
@@ -45,10 +45,16 @@
     margin: 0 auto;
     padding: 0;
     padding-right: 30px;
-    padding-bottom: 61px;
+    padding-bottom: 12px;
     padding-left: 30px;
 
     background-color: #ffffff;
+  }
+
+  .page-header__container {
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .page-header__logo {
@@ -69,19 +75,46 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1220px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
-    padding-right: 40px;
-    padding-bottom: 61px;
-    padding-left: 40px;
+    padding-bottom: 71px;
 
     background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+
+    &--index::before {
+      content: "";
+      position: absolute;
+      background: #68b738;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 696px;
+      top: 0;
+      left: 50%;
+      z-index: -2;
+    }
+  }
+
+  .page-header__container {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-top: 53px;
+    padding-bottom: 10px;
   }
 
   .page-header__logo {
-    padding-top: 24px;
-    padding-bottom: 113px;
+    width: 203px;
+    height: 60px;
+    padding-top: 0;
   }
 
   .page-header__logo img {

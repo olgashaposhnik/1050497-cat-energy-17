@@ -3,6 +3,18 @@
   margin: 0 auto;
   list-style: none;
   padding: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #cdcdcd;
+    z-index: 2;
+  }
 }
 
 .info__item {
@@ -12,7 +24,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .info__label {
@@ -44,20 +56,105 @@
   color: #444444;
   border: solid 1px;
   border-color: rgba(205, 205, 205, 0.5);
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 15px;
-  margin-left: 15px;
+  margin-left: 13px;
 
   &--name {
     width: 230px;
   }
 
   &--weight {
-    width: 188px;
+    width: 187px;
   }
 
   &--age {
-    width: 154px;
+    width: 155px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .info {
+    width: 628px;
+    padding-bottom: 66px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .info__item {
+    width: 631px;
+    margin-bottom: -3px;
+    align-items: baseline;
+  }
+
+  .info__label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .info__input {
+    font-size: 20px;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    margin-left: 17px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+
+    &--name {
+      width: 565px;
+    }
+
+    &--weight {
+      width: 516px;
+    }
+
+    &--age {
+      width: 477px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    width: 610px;
+    padding-bottom: 0;
+  }
+
+  .info__item {
+    width: 610px;
+  }
+
+  .info__label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .info__input {
+    font-size: 20px;
+    line-height: 1;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    margin-left: 0;
+    margin-right: 40px;
+    margin-bottom: 12px;
+
+    &--name {
+      width: 484px;
+    }
+
+    &--weight {
+      width: 455px;
+    }
+
+    &--age {
+      margin-left: 3px;
+      width: 416px;
+    }
   }
 }

@@ -9,10 +9,15 @@
 </head>
 <body>
   <header class="page-header">
+    <div class="page-header__container">
     <div class="page-header__wrapper">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов «Cat Energy»">
-    </a>
+        <a class="page-header__logo">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="./img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов «Cat Energy»">
+        </picture>
+        </a>
     <button class="page-header__toggle" type="button"></button>
     </div>
     <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -31,10 +36,13 @@
         </ul>
       </div>
     </nav>
+  </div>
   </header>
   <main class="form-main">
+    <div class="form-main__wrapper">
     <h1 class="form-main__header">Подбор программы</h1>
     <p class="form-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    </div>
     <section class="selection">
       <h2 class="visually-hidden">Критерии подбора программы</h2>
       <form action="http://echo.htmlacademy.ru" class="selection__form" method="post">
@@ -46,33 +54,33 @@
             <li class="info__item"><label class="info__label" for="age">Возраст (лет):</label> <input class="info__input info__input--age" id="age" name="age" placeholder="7" type="text"></li>
           </ul>
           <ul class="target">
-            <li class="target__item"><label class="target__label target__label--radio" for="losing-weight"><input checked class="target__radio" id="losing-weight" name="target" type="radio" value="losing-weight"> Похудение</label></li>
-            <li class="target__item"><label class="target__label target__label--radio" for="weight-gain"><input class="target__radio" id="weight-gain" name="target" type="radio" value="weight-gain"> Набор массы</label></li>
-            <li class="target__item"><label class="target__label target__label--radio" for="dont-know"><input class="target__radio" id="dont-know" name="target" type="radio" value="dont-know"> Не знаю (Нужен ваш совет)</label></li>
+            <li class="target__item"><input checked class="target__radio" id="losing-weight" name="target" type="radio" value="losing-weight"><label class="target__label target__label--radio" for="losing-weight"> Похудение</label></li>
+            <li class="target__item"><input class="target__radio" id="weight-gain" name="target" type="radio" value="weight-gain"><label class="target__label target__label--radio" for="weight-gain"> Набор массы</label></li>
+            <li class="target__item"><input class="target__radio" id="dont-know" name="target" type="radio" value="dont-know"><label class="target__label target__label--radio" for="dont-know"> Не знаю (Нужен ваш совет)</label></li>
           </ul>
         </section>
         <section class="owner-contacts">
           <h2 class="owner-contacts__header">Контактные данные (владельца кота)</h2>
           <ul class="owner-contacts__list">
             <li class="owner-contacts__item">
-              <label class="owner-contacts__label" for="owner-mail">E-mail:*</label> <input class="owner-contacts__input owner-contacts__input--email" id="owner-mail" name="owner-email" placeholder="kuklachev@gmail.com" type="email"> <svg class="owner-contacts__email--logo" height="14" width="18"></svg>
+              <label class="owner-contacts__label owner-contacts__label--mail" for="owner-mail">E-mail:*</label> <input class="owner-contacts__input owner-contacts__input--email" id="owner-mail" name="owner-email" placeholder="kuklachev@gmail.com" type="email"> <svg class="owner-contacts__svg owner-contacts__svg--email" height="14" width="18"><use xlink:href="./img/sprite.svg#icon-mail"></use></svg>
             </li>
             <li class="owner-contacts__item">
-              <label class="owner-contacts__label" for="owner-phone">Телефон:*</label> <input class="owner-contacts__input owner-contacts__input--phone" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" type="tel"> <svg class="owner-contacts__phone--logo" height="21" width="21"></svg>
+              <label class="owner-contacts__label" for="owner-phone">Телефон:*</label> <input class="owner-contacts__input owner-contacts__input--phone" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" type="tel"> <svg class="owner-contacts__svg owner-contacts__svg--phone" height="21" width="21"><use xlink:href="./img/sprite.svg#icon-phone"></use></svg>
             </li>
           </ul>
         </section>
         <section class="comments">
           <h2 class="comments__header">Комментарий</h2>
-          <textarea class="comments__text" cols="30" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота" rows="10"></textarea>
+          <textarea class="comments__text" cols="30" rows="2" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
         </section>
         <section class="additional">
           <h2 class="additional__header">Дополнительно</h2>
           <ul class="additional__list">
-            <li class="additional__item"><label class="additional__label" for="sweetener"><input checked class="additional__checkbox" id="sweetener" name="sweetener" type="checkbox"> Сахарозаменитель</label></li>
-            <li class="additional__item"><label class="additional__label" for="water"><input class="additional__checkbox" id="water" name="water" type="checkbox"> Питьевая вода</label></li>
-            <li class="additional__item"><label class="form__label form__label--other checkbox__label" for="milk"><input class="additional__checkbox" id="milk" name="milk" type="checkbox"> Молоко</label></li>
-            <li class="additional__item"><label class="form__label form__label--other checkbox__label" for="vitamins"><input class="additional__checkbox" id="vitamins" name="vitamins" type="checkbox"> Витамины</label></li>
+            <li class="additional__item"><input checked class="additional__checkbox" id="sweetener" name="sweetener" type="checkbox"><label class="additional__label" for="sweetener"> Сахарозаменитель</label></li>
+            <li class="additional__item"><input class="additional__checkbox" id="water" name="water" type="checkbox"><label class="additional__label" for="water"> Питьевая вода</label></li>
+            <li class="additional__item"><input class="additional__checkbox" id="milk" name="milk" type="checkbox"><label class="additional__label" for="milk"> Молоко</label></li>
+            <li class="additional__item"><input class="additional__checkbox" id="vitamins" name="vitamins" type="checkbox"><label class="additional__label" for="vitamins"> Витамины</label></li>
           </ul>
           <div class="button-wrapper">
             <button class="button-wrapper__button">Отправить заявку</button> <span class="button-wrapper__required">* — Обязательные поля</span>
@@ -80,38 +88,54 @@
         </section>
       </form>
     </section>
-    <section class="contacts contacts--gray">
+    <section class="contacts">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="contacts__container">
+      <div class="contacts__container contacts__container--gray">
       <div class="contacts__wrapper">
-      <p class="contacts__partnership">Приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__partnership">Приглашаем <br> к сотрудничеству дилеров!</p>
       <p class="contacts__adress">
         <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
         <span class="contacts__city">Санкт-Петербург</span>
       </p>
       </div>
       </div>
-      <img class="contacts__map" src="../img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
+      <div class="contacts__mapwrapper" id="map-canvas">
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo"><img alt="Функциональное питание для котов «Cat Energy»" class="page-footer__logo--image" height="24" src="../img/logo-footer.svg" width="128"></a>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><img alt="Мы в Вконтакте" class="social__image" height="34" src="../img/icon-vk.svg" width="27"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><img alt="Мы в Инстаграме" class="social__image" height="34" src="../img/icon-insta.svg" width="27"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><img alt="Мы в Фейсбуке" class="social__image" height="34" src="../img/icon-fb.svg" width="27"></a>
-        </li>
-      </ul>
+      <div class="page-footer__container">
+      <a class="page-footer__logo">
+        <img class="page-footer__logo--image" src="./img/logo-footer.svg" width="128" height="24" alt="Функциональное питание для котов «Cat Energy»">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <img class="social__image" src="./img/icon-vk.svg" width="27" height="34" alt="Мы в Вконтакте">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <img class="social__image" src="./img/icon-insta.svg" width="27" height="34" alt="Мы в Инстаграме">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <img class="social__image" src="./img/icon-fb.svg" width="27" height="34" alt="Мы в Фейсбуке">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <img class="copyright__image" src="./img/htmlacademy.svg" width="27" height="34" alt="HTML Академия">
+        </a>
+      </div>
     </div>
-    <div class="page-footer__copyright copyright">
-      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy <img alt="HTML Академия" class="copyright__image" height="34" src="../img/htmlacademy.svg" width="27"></a>
-    </div>
-  </footer>
+    </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>

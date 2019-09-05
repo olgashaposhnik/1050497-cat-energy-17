@@ -27,8 +27,8 @@
 .description-block__header {
   width: 280px;
   margin: 0 auto;
-  padding-top: 29px;
-  padding-bottom: 19px;
+  padding-top: 27px;
+  padding-bottom: 25px;
 
   font-weight: normal;
   font-size: 36px;
@@ -45,7 +45,7 @@
   width: 280px;
   margin: 0 auto;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
   padding-left: 20px;
 
   font-weight: normal;
@@ -62,14 +62,16 @@
 
 .description-block__image {
   margin: 0 auto;
-  padding-bottom: 3px;
+  padding-bottom: 0;
+  padding-left: 20px;
 }
 
 .description-block__button {
   width: 280px;
   margin: 0 auto;
-  padding-top: 14px;
+  padding-top: 11px;
   padding-bottom: 11px;
+  margin-top: -2px;
 
   font-weight: normal;
   font-size: 14px;
@@ -104,7 +106,7 @@
     margin: 0;
     padding-top: 29px;
     padding-bottom: 19px;
-    padding-left: 90px;
+    padding-left: 87px;
 
     font-weight: normal;
     font-size: 60px;
@@ -120,9 +122,9 @@
   .description-block__slogan {
     width: 427px;
     margin: 0;
-    padding-top: 29px;
-    padding-bottom: 29px;
-    padding-left: 90px;
+    padding-top: 21px;
+    padding-bottom: 20px;
+    padding-left: 88px;
 
     font-weight: normal;
     font-size: 20px;
@@ -138,17 +140,18 @@
   .description-block__image {
     width: 709px;
     height: 609px;
+    padding-left: 0;
   }
 
   .description-block__button {
     position: absolute;
-    top: 275px;
-    left: 90px;
+    top: 258px;
+    left: 119px;
 
-    width: 280px;
+    width: 245px;
     margin: 0 auto;
-    padding-top: 17px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     font-weight: normal;
     font-size: 20px;
@@ -178,14 +181,35 @@
 
     background: url("../img/index-background-desktop.jpg ") no-repeat 50% 0;
     background-size: 720px auto;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .description-block__header {
+    padding-top: 29px;
+    padding-bottom: 19px;
+    padding-left: 80px;
+  }
+
+  .description-block__slogan {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
   }
 
   .description-block__image {
-    width: 709px;
-    height: 609px;
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    z-index: 2;
+    top: -51px;
+    left: 490px;
   }
 
   .description-block__button {
-    left: 130px;
+    left: 119px;
+    top: 264px;
   }
 }

@@ -6,8 +6,9 @@
 }
 
 .catalog-block__header {
-  margin-top: 37px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 29px;
 
   font-weight: normal;
   font-size: 36px;
@@ -18,6 +19,18 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #cdcdcd;
+    z-index: 2;
+  }
 }
 
 .catalog-block__list {
@@ -32,6 +45,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 280px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #cdcdcd;
+    z-index: 2;
+  }
 }
 
 .catalog-block__image {
@@ -45,6 +71,9 @@
 }
 
 .catalog-block__title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 14px;
   width: 80px;
 
   font-weight: normal;
@@ -68,10 +97,23 @@
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
+  border-spacing: 0;
+}
+
+.catalog-block__tablefield {
+  width: 70px;
+  border-spacing: 0;
+  text-align: left;
+  padding: 0;
+  padding-top: 1px;
+  padding-bottom: 0;
 }
 
 .catalog-block__tablevalue {
+  width: 70px;
+  border-spacing: 0;
   text-align: right;
+  padding: 0;
 }
 
 .catalog-block__button {
@@ -79,8 +121,9 @@
   justify-content: center;
   width: 280px;
   margin: 0 auto;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  margin-top: -5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 
   font-weight: normal;
   font-size: 16px;
@@ -105,11 +148,15 @@
   }
 
   .catalog-block__header {
-    margin-top: 65px;
-    margin-bottom: 70px;
+    margin-top: 15px;
+    margin-bottom: 54px;
 
     font-size: 60px;
     line-height: 1;
+
+    &::before {
+      display: none;
+    }
   }
 
   .catalog-block__list {
@@ -123,10 +170,14 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 324px;
-    margin-bottom: 58px;
+    margin-bottom: 57px;
     position: relative;
 
     &::before {
+      display: none;
+    }
+
+    &::after {
       content: "";
       position: absolute;
       z-index: -1;
@@ -146,37 +197,37 @@
     margin: 0 auto;
 
     &--hen500 {
-      width: 161px;
+      width: 324px;
       height: 172px;
     }
 
     &--hen1000 {
-      width: 195px;
+      width: 324px;
       height: 208px;
     }
 
     &--fish500 {
-      width: 163px;
+      width: 324px;
       height: 174px;
     }
 
     &--fish1000 {
-      width: 194px;
+      width: 324px;
       height: 208px;
     }
 
     &--buckwheat400 {
-      width: 161px;
+      width: 324px;
       height: 171px;
     }
 
     &--buckwheat1000 {
-      width: 195px;
+      width: 324px;
       height: 208px;
     }
 
     &--rice500 {
-      width: 163px;
+      width: 324px;
       height: 174px;
     }
   }
@@ -193,8 +244,8 @@
     font-size: 20px;
     line-height: 1;
     text-align: center;
-    padding-top: 39px;
-    padding-bottom: 28px;
+    padding-top: 33px;
+    padding-bottom: 19px;
   }
 
   .catalog-block__table {
@@ -202,9 +253,17 @@
     line-height: 1;
   }
 
+  .catalog-block__tablefield {
+    width: 70px;
+    border-spacing: 0;
+    text-align: left;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   .catalog-block__tablevalue {
     text-align: right;
-    padding-bottom: 10px;
     position: relative;
 
     &::before {
@@ -223,7 +282,8 @@
 
   .catalog-block__button {
     width: 250px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    margin-top: 32px;
   }
 }
 
@@ -234,7 +294,11 @@
   }
 
   .catalog-block__header {
+    margin: 0;
+    padding-top: 0;
+    margin-top: -5px;
     padding-left: 40px;
+    padding-bottom: 84px;
   }
 
   .catalog-block__list {
@@ -251,13 +315,21 @@
     margin-left: 40px;
 
     &::before {
+      display: none;
+    }
+
+    &::after {
       content: "";
       position: absolute;
       z-index: -1;
-      top: 60px;
+      bottom: 0;
       left: 0;
 
+      display: block;
       width: 245px;
+      height: 431px;
+
+      background-color: #f2f2f2;
     }
   }
 
@@ -266,37 +338,37 @@
     margin: 0 auto;
 
     &--hen500 {
-      width: 161px;
+      width: 245px;
       height: 172px;
     }
 
     &--hen1000 {
-      width: 195px;
+      width: 245px;
       height: 208px;
     }
 
     &--fish500 {
-      width: 163px;
+      width: 245px;
       height: 174px;
     }
 
     &--fish1000 {
-      width: 194px;
+      width: 245px;
       height: 208px;
     }
 
     &--buckwheat400 {
-      width: 161px;
+      width: 245px;
       height: 171px;
     }
 
     &--buckwheat1000 {
-      width: 195px;
+      width: 245px;
       height: 208px;
     }
 
     &--rice500 {
-      width: 163px;
+      width: 245px;
       height: 174px;
     }
   }
@@ -309,23 +381,29 @@
   .catalog-block__title {
     width: 130px;
     margin: 0 auto;
-    padding-top: 39px;
-    padding-bottom: 28px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .catalog-block__table {
+    width: 166px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1;
   }
 
   .catalog-block__tablevalue {
     text-align: right;
-    padding-bottom: 10px;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
       bottom: 0;
-      left: -125px;
+      left: -85px;
 
       display: block;
-      width: 249px;
+      width: 169px;
       height: 1px;
 
       background-color: #cdcdcd;
@@ -334,8 +412,8 @@
 
   .catalog-block__button {
     width: 169px;
-    margin-bottom: 40px;
-    margin-top: 33px;
+    margin-bottom: 15px;
+    margin-top: 32px;
   }
 
   .catalog-block__container {
@@ -344,5 +422,6 @@
     width: 1300px;
     justify-content: space-between;
     align-items: flex-end;
+    padding-bottom: 84px;
   }
 }
