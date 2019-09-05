@@ -50,6 +50,7 @@
 
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   border-radius: 6px;
 
   &::before {
@@ -192,6 +193,14 @@
     border-bottom: #bebebe 1px dotted;
     padding-bottom: 7px;
 
+    &:hover {
+      border-bottom: #666666 1px solid;
+    }
+
+    &:active {
+      border-bottom: transparent 1px solid;
+    }
+
     &--before {
       width: 46px;
       margin-right: 25px;
@@ -231,6 +240,8 @@
     &:active {
       top: -9px;
       left: 266px;
+      width: 34px;
+      height: 34px;
 
       border: solid 2px #68b738;
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);

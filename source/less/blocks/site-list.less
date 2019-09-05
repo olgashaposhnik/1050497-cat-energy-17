@@ -170,15 +170,19 @@
     &--index a {
       color: #ffffff;
     }
+
+    &--index:hover a {
+      color: rgba(255, 255, 255, 0.6);
+    }
   }
 
-  .site-list__item a[href] {
+  .site-list__item--index a[href] {
     &:hover {
-      color: rgba(17, 17, 17, 0.6);
+      color: rgba(255, 255, 255, 0.6);
     }
 
     &:active {
-      color: rgba(17, 17, 17, 0.3);
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 }
