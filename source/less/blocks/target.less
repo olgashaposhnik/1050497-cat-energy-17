@@ -29,7 +29,7 @@
   width: 28px;
   height: 28px;
 
-  border: 1px solid rgb(205, 205, 205);
+  border: 1px solid #cdcdcd;
   border-radius: 50%;
 }
 
@@ -47,7 +47,10 @@
   border-radius: 50%;
 }
 
-.target__radio + .target__label:hover::before,
+.target__radio + .target__label:hover::before {
+  border: 1px solid  #bababa;
+}
+
 .target__radio + &:focus::before,
 .target__radio + &:active::before {
   border: 1px solid rgb(186, 186, 186);
