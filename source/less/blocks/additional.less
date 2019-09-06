@@ -72,6 +72,14 @@
   padding-bottom: 8px;
 
   cursor: pointer;
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .additional__checkbox + .additional__label::before {
@@ -86,14 +94,6 @@
   background-origin: content-box;
   border: 1px solid rgb(205, 205, 205);
   transform: translateY(-50%);
-
-  &:hover + .additional__label::before {
-    border: 1px solid #bababa;
-  }
-
-  &:active + .additional__label::before {
-    opacity: 0.3;
-  }
 }
 
 .additional__checkbox:checked + .additional__label::after {
