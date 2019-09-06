@@ -88,7 +88,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   position: relative;
-  border: solid 1px #cdcdcd;
+  outline: solid 1px #cdcdcd;
 
   &--email {
     width: 203px;
@@ -98,11 +98,11 @@
     width: 188px;
   }
 
-  &:active .owner-contacts__svg {
+  &:active + .owner-contacts__svg {
     fill: #68b738;
   }
 
-  &:invalid .owner-contacts__svg {
+  &:invalid + .owner-contacts__svg {
     fill: #ff8282;
   }
 }

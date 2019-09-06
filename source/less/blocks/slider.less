@@ -229,22 +229,21 @@
     height: 34px;
 
     background-color: #ffffff;
-    border: solid 1px #cdcdcd;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 0 0 1px #cdcdcd,
+      0 2px 5px 0 rgba(0, 0, 0, 0.15);
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active {
-      top: -9px;
-      left: 266px;
       width: 34px;
       height: 34px;
-
-      border: solid 2px #68b738;
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow:
+        0 0 0 2px #68b738,
+        0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
 
     &::before {
