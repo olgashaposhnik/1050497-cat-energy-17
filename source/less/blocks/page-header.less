@@ -91,6 +91,12 @@
     position: relative;
     z-index: 1;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &--index::before {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+
     &--index::before {
       content: "";
       position: absolute;
@@ -103,10 +109,6 @@
       top: 0;
       left: 50%;
       z-index: -2;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
     }
   }
 
