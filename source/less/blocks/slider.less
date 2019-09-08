@@ -153,7 +153,7 @@
       width: 690px;
       height: 517px;
       clip: rect(auto, auto, auto, 335px);
-      z-index: 1;
+      z-index: 2;
       right: 0;
       top: 0;
     }
@@ -268,6 +268,7 @@
 @media (min-width: @desktop-width) {
   .slider {
     width: 690px;
+    margin: 0;
 
     &::after {
       content: "";
@@ -280,7 +281,7 @@
       height: 462px;
 
       background: linear-gradient(to right, #f2f2f2 72.65%, #eaeaea 53%);
-      z-index: 0;
+      z-index: 1;
       transform: none;
     }
   }

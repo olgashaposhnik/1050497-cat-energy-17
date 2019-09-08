@@ -7,6 +7,45 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var rename = require("gulp-rename");
+var del = require("del");
+var minify = require("gulp-minify");
+var webp = require("gulp-webp");
+
+gulp.task("sprite", function () {
+  return gulp.src("source/img/sprite-*.svg")
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("clean", function () {
+  return del("build");
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("images", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(minify([
+      minify.optipng({
+        optimizationLevel: 3
+      }),
+      minify.jpegtran({
+        progressive: true
+      }),
+      minify.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
+});
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")

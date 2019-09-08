@@ -1,7 +1,13 @@
 .example {
+  width: 100%;
   margin: 0 auto;
 
   background-color: #f2f2f2;
+}
+
+.example__center {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .example__wrapper {
@@ -43,11 +49,27 @@
   letter-spacing: normal;
 }
 
+.example__cover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .example__table {
+  width: 280px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 19px;
+}
+
+.example__table dd {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-inline-start: 0;
 }
 
 .example__container {
@@ -111,6 +133,7 @@
 
 .example__cost {
   justify-content: center;
+  margin: 0 auto;
   margin-bottom: 20px;
 
   font-weight: normal;
@@ -137,9 +160,30 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: 768px;
+    width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 462px;
+
+      background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+      transform: none;
+    }
+  }
+
+  .example__center {
+    width: 768px;
+    margin: 0 auto;
   }
 
   .example__wrapper {
@@ -275,10 +319,31 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    width: 1220px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 462px;
+
+      background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+      transform: none;
+    }
+  }
+
+  .example__center {
+    width: 1300px;
     margin: 0 auto;
-    padding-right: 40px;
-    padding-left: 40px;
     display: flex;
     flex-direction: row;
   }
@@ -286,7 +351,7 @@
   .example__wrapper {
     width: 570px;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     z-index: 10;
   }
