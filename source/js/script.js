@@ -20,7 +20,7 @@
     }
     var map = new google.maps.Map(document.getElementById('map-canvas'),
                                   mapOptions);
-    var image = "../img/map-pin.png";
+    var image = "./img/map-pin.png";
     var myLatLng = new google.maps.LatLng(59.938631, 30.323055);
     var beachMarker = new google.maps.Marker({
       position: myLatLng,
